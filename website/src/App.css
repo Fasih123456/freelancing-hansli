@@ -1,0 +1,631 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+#root {
+  background: linear-gradient(
+    153deg,
+    rgba(0, 31, 63, 1) 0%,
+    rgba(0, 31, 63, 1) 35%,
+    rgba(0, 31, 63, 1) 50%,
+    rgba(0, 31, 63, 1) 65%,
+    rgba(0, 31, 63, 0.95) 100%
+  );
+  font-family: "Noto Sans", sans-serif !important;
+}
+
+:root {
+  --text-multiplier: 1;
+  --bg-color-light: #fff;
+  --bg-color-dark: linear-gradient(
+    153deg,
+    rgba(0, 31, 63, 1) 0%,
+    rgba(0, 31, 63, 1) 35%,
+    rgba(0, 31, 63, 1) 50%,
+    rgba(0, 31, 63, 1) 65%,
+    rgba(0, 31, 63, 0.95) 100%
+  );
+  --text-color-light: #000;
+  --text-color-dark: #fff;
+}
+
+.header-dropdown {
+  --bg-color-dark: linear-gradient(
+    153deg,
+    rgba(0, 31, 63, 1) 0%,
+    rgba(0, 31, 63, 1) 35%,
+    rgba(0, 31, 63, 1) 50%,
+    rgba(0, 31, 63, 1) 65%,
+    rgba(0, 31, 63, 0.95) 100%
+  );
+}
+
+.header-dropdown body.whiteMode {
+  background-color: red;
+}
+
+.light-mode {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+.calender {
+  font-family: "Noto Sans", sans-serif !important;
+}
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.calender.container {
+  padding-top: 60px;
+  margin-top: 0px !important;
+}
+.header {
+  padding: 10px 0;
+}
+
+#header {
+  position: initial !important;
+}
+#navbar > ul > li:nth-child(3) > div > div > img {
+  margin-right: 20px !important;
+  width: 50px;
+  margin-left: 20px;
+}
+#navbar > ul > li:nth-child(3) > div > div > span {
+  margin-right: 20px !important;
+  color: white !important;
+}
+#navbar > ul > li > a {
+  color: white !important;
+}
+#root > div > div > div:nth-child(1) > div:nth-child(1) > button {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+
+  font-size: calc(var(--text-multiplier) * 17px);
+  line-height: 17px;
+  padding: 10px 10px;
+}
+#root > div > div > div:nth-child(1) > div:nth-child(1) {
+  text-align: left;
+}
+#root > div > div > div:nth-child(1) > div:nth-child(5) > button {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: calc(var(--text-multiplier) * 17px);
+
+  line-height: 17px;
+  padding: 10px 10px;
+}
+#root > div > div > div:nth-child(1) > div:nth-child(5) {
+  text-align: right;
+}
+#root > div > div > div:nth-child(2) {
+  border-top: 2px solid white !important;
+  margin-top: 15px;
+  color: white;
+  padding-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  background-color: red;
+}
+#root > div > div > div:nth-child(3) {
+  border-bottom: 2px solid white !important;
+  margin-bottom: 15px !important;
+  padding-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  background-color: red;
+}
+#root > div > div > div:nth-child(3) > div > a {
+  color: white;
+  font-size: calc(var(--text-multiplier) * 20px);
+}
+.row-header {
+  background-color: #848282;
+  width: 100%;
+  margin: 0;
+  padding: 12px 0px;
+
+  font-size: calc(var(--text-multiplier) * 15px);
+  position: sticky;
+  border-bottom: 2px solid white;
+  top: 0;
+}
+.row-program {
+  background: white;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  height: 100px;
+}
+.BBC-One {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/BBC_One_logo_2021.svg/2560px-BBC_One_logo_2021.svg.png");
+  background-position: center;
+  color: transparent;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.BBC-Two {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/BBC_Two_logo_2021.svg/2560px-BBC_Two_logo_2021.svg.png");
+  background-position: center;
+  color: transparent;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.Channel-5 {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Channel_5_logo_2011.svg/1200px-Channel_5_logo_2011.svg.png");
+  background-position: center;
+  color: transparent;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.Channel-4 {
+  background: url("https://logos-world.net/wp-content/uploads/2021/02/Channel-4-Logo.png");
+  background-position: center;
+  color: transparent;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.ITV1 {
+  background: url("https://www.pngitem.com/pimgs/m/26-269446_itv-logo-itv1-logo-hd-png-download.png");
+  background-position: center;
+  color: transparent;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.Sky-Documentaries {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/f/f8/Sky_Documentaries_Logo_2020.png");
+  background-position: center;
+  color: transparent;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.col-channel {
+  color: #fff;
+  font-weight: 700;
+  font-size: calc(var(--text-multiplier) * 16px);
+
+  min-width: 200px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 2px solid #101010;
+  border-right: 2px solid #101010;
+}
+
+#root > div > div > div:nth-child(4) > div.row-header.row > div:nth-child(1) {
+  width: 200px;
+  min-width: 200px;
+  color: white;
+}
+.row-show {
+  border: 1px solid rgb(118 120 123 / 18%);
+  background: #848282;
+  transition: 0.5s;
+  border-left: none;
+  border-right: none;
+}
+.highlighted {
+  background-color: #6f6f6f !important;
+  font-size: calc(var(--text-multiplier) * 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: none;
+  color: white;
+  border-right: none;
+  min-width: 130px;
+}
+
+body.whiteTheme .highlighted {
+  background-color: red !important;
+  font-size: calc(var(--text-multiplier) * 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: none;
+  color: white;
+  border-right: none;
+  min-width: 130px;
+}
+
+#root > div > div > div:nth-child(1) > div {
+  color: white;
+  font-size: calc(var(--text-multiplier) * 25px);
+}
+.row-show:hover {
+  cursor: pointer;
+  border: 1px solid rgb(118 120 123 / 90%);
+}
+.footer {
+  background-color: transparent;
+}
+#footer > div.container.mt-4 > div > strong {
+  padding-left: 4px !important;
+}
+#footer > div.container.mt-4 > div > strong > a {
+  color: white !important;
+}
+
+a.nav-link {
+  color: white !important;
+}
+
+#username {
+  color: white;
+  padding-right: 20px;
+}
+.profileimage {
+  width: 50px;
+  margin-left: 20px;
+}
+.row-header .col {
+  color: white;
+}
+
+/*mobile view */
+@media (max-width: 800px) {
+  .carousel-heading {
+    display: none;
+  }
+
+  #header-long {
+    width: 300%;
+  }
+
+  #footer-long {
+    width: 300%;
+  }
+
+  body.whiteTheme #header-long {
+    background: linear-gradient(
+      153deg,
+      #ffb6c1 0%,
+      #ffb6c1 35%,
+      #ff69b4 50%,
+      #ffb6c1 65%,
+      rgba(255, 182, 193, 0.95) 100%
+    );
+  }
+
+  body.whiteTheme #footer-long {
+    width: 300%;
+    background: linear-gradient(
+      153deg,
+      #ffb6c1 0%,
+      #ffb6c1 35%,
+      #ff69b4 50%,
+      #ffb6c1 65%,
+      rgba(255, 182, 193, 0.95) 100%
+    );
+  }
+
+  /* White Theme CSS */
+  body.whiteTheme #root {
+    background: linear-gradient(
+      153deg,
+      #ffb6c1 0%,
+      #ffb6c1 35%,
+      #ff69b4 50%,
+      #ffb6c1 65%,
+      rgba(255, 182, 193, 0.95) 100%
+    );
+  }
+
+  .calender {
+    width: 300%;
+    background: linear-gradient(
+      153deg,
+      rgba(0, 31, 63, 1) 0%,
+      rgba(0, 31, 63, 1) 35%,
+      rgba(0, 31, 63, 1) 50%,
+      rgba(0, 31, 63, 1) 65%,
+      rgba(0, 31, 63, 0.95) 100%
+    );
+    padding-top: 0px;
+  }
+
+  #day-row {
+    background: linear-gradient(
+      153deg,
+      rgba(0, 31, 63, 1) 0%,
+      rgba(0, 31, 63, 1) 35%,
+      rgba(0, 31, 63, 1) 50%,
+      rgba(0, 31, 63, 1) 65%,
+      rgba(0, 31, 63, 0.95) 100%
+    );
+  }
+
+  #date-row {
+    background: linear-gradient(
+      153deg,
+      rgba(0, 31, 63, 1) 0%,
+      rgba(0, 31, 63, 1) 35%,
+      rgba(0, 31, 63, 1) 50%,
+      rgba(0, 31, 63, 1) 65%,
+      rgba(0, 31, 63, 0.95) 100%
+    );
+    margin-bottom: 0px;
+  }
+}
+
+.settings {
+  width: 30px;
+  height: 30px;
+}
+.whiteMode {
+  display: none;
+}
+
+.toggle-btn-wrapper {
+  position: relative;
+  width: 100px;
+  height: 50px;
+}
+.toggle-btn-default {
+  border: 2px solid #cccccc;
+  background-color: #f00;
+  height: 30px;
+  width: 95px;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 18px;
+}
+.toggle-btn-control {
+  width: 35px;
+  height: 24px;
+  background-color: #cccccc;
+  border: 2px solid #a9a9a9;
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  top: 3px;
+  right: 9px;
+  z-index: 2;
+  border-radius: 0 15px 15px 0;
+}
+.transform-btn,
+.transform-control {
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.transform-btn-active {
+  background-color: #f00;
+}
+.transform-control-active {
+  right: 57px;
+  border-radius: 15px 0 0 15px;
+  background-color: red;
+}
+.modal-content {
+  background-color: grey;
+}
+.modal-header {
+  color: red;
+}
+.modal-title {
+  width: 100%;
+  text-align: center;
+}
+.redColor {
+  color: red;
+}
+.form-range::-webkit-slider-runnable-track {
+  background-color: #ff00005e;
+}
+.form-range::-webkit-slider-thumb {
+  background-color: #ff0000;
+}
+.modal-backdrop.show {
+  background-color: pink;
+}
+
+/* White Theme CSS */
+body.whiteTheme #root {
+  background: linear-gradient(
+    153deg,
+    #ffb6c1 0%,
+    #ffb6c1 35%,
+    #ff69b4 50%,
+    #ffb6c1 65%,
+    rgba(255, 182, 193, 0.95) 100%
+  );
+}
+body.whiteTheme .header .logo h1 {
+  color: #001f3f !important;
+}
+body.whiteTheme a.nav-link {
+  color: white !important;
+}
+body.whiteTheme #username {
+  color: #001f3f;
+}
+body.whiteTheme #root > div > div > div:nth-child(2) {
+  border-top: 2px solid white !important;
+  color: #fff;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+body.whiteTheme #root > div > div > div:nth-child(3) {
+  border-bottom: 2px solid white !important;
+  border-left: 2px solid white;
+  color: red;
+  border-right: 2px solid white;
+}
+body.whiteTheme #root > div > div > div:nth-child(3) > div > a {
+  color: #fff;
+}
+body.whiteTheme .footer {
+  color: #001f3f;
+  background: linear-gradient(
+    153deg,
+    #ffb6c1 0%,
+    #ffb6c1 35%,
+    #ff69b4 50%,
+    #ffb6c1 65%,
+    rgba(255, 182, 193, 0.95) 100%
+  );
+}
+
+body.whiteTheme .calender {
+  background: linear-gradient(
+    153deg,
+    #ffb6c1 0%,
+    #ffb6c1 35%,
+    #ff69b4 50%,
+    #ffb6c1 65%,
+    rgba(255, 182, 193, 0.95) 100%
+  );
+}
+
+.modal-text {
+  color: red;
+}
+
+body.whiteTheme .footer .footer-links ul a {
+  color: #001f3f;
+}
+body.whiteTheme .footer .footer-info .logo span {
+  color: #001f3f;
+}
+body.whiteTheme #footer > div.container.mt-4 > div > strong > a {
+  color: #001f3f !important;
+}
+body.whiteTheme a.nav-link.changethemebutton {
+  color: #fff !important;
+}
+body.whiteTheme .container-programs {
+  border: 1px solid black;
+}
+body.whiteTheme .whiteMode {
+  display: block;
+}
+
+body.whiteTheme .logoImage {
+  filter: invert(1);
+}
+body.whiteTheme .modal-content {
+  background-color: white;
+}
+
+.btn-close {
+  color: red;
+}
+
+.daytext-row {
+  border-top: 2px solid white;
+}
+
+.daynumber-row {
+  border-bottom: 2px solid white;
+  margin-bottom: 20px;
+}
+
+body.whiteTheme .daytext-row {
+  border-top: 2px solid white;
+}
+
+body.whiteTheme .daynumber-row {
+  border-bottom: 2px solid white;
+  margin-bottom: 20px;
+}
+
+body.whiteTheme .row-header {
+  background-color: pink;
+  color: black;
+}
+
+body.whiteTheme .row-header .col {
+  color: black;
+}
+
+body.whiteTheme .col-program {
+  background-color: white;
+}
+
+body.whiteTheme .row-program {
+  border: 1px dotted red;
+}
+
+body.whiteTheme .nav-link {
+  color: white;
+}
+
+.navbar-nav .dropdown-menu {
+  background: linear-gradient(
+    153deg,
+    rgba(0, 31, 63, 1) 0%,
+    rgba(0, 31, 63, 1) 35%,
+    rgba(0, 31, 63, 1) 50%,
+    rgba(0, 31, 63, 1) 65%,
+    rgba(0, 31, 63, 0.95) 100%
+  );
+}
+
+body.whiteTheme .navbar-nav .dropdown-menu {
+  background: pink;
+}
+
+#name-link {
+  padding-left: 0px;
+}
+.container {
+  /* Set container height and overflow to enable scrolling */
+  height: 100%;
+  overflow-y: auto;
+  /* Add other styling for container as needed */
+}
+
+.row-header {
+  /* Set row-header to stick to the top */
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8; /* Set background color if desired */
+  /* Add other styling for row-header as needed */
+}
+
+body.whiteTheme .suggestion-container {
+  background-color: pink;
+}
+
+.suggestion-container {
+  background-color: rgb(14, 28, 54);
+}
+
+.login-button {
+  background-color: red;
+}
+
+.whiteOutLine {
+  border-color: white;
+}
+
+.social-media-links {
+  padding-left: 1vw;
+}
+
+.fa-brands,
+.fab {
+  font-size: 30px;
+  color: black;
+}
+
+.whiteTheme .fa-brands,
+.whiteTheme .fab {
+  color: white;
+}

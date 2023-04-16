@@ -1,0 +1,28 @@
+.nav-link {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.nav-link img {
+  margin-right: 10px;
+}
+
+.nav-link h1 {
+  margin: 0;
+}
+
+.nav-link a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-logout {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-logout:hover {
+  background-color: #138496;
+  border-color: #138496;
+}

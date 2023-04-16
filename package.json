@@ -1,0 +1,38 @@
+{
+  "name": "hansli1235-freelancing-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js",
+    "build": "cd website && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fasih123456/hansli1235-freelancing-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fasih123456/hansli1235-freelancing-website/issues"
+  },
+  "engines": {
+    "node": "16.14.0"
+  },
+  "homepage": "https://github.com/Fasih123456/hansli1235-freelancing-website#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mailgen": "^2.0.27",
+    "mysql2": "^3.2.0",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.22",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0"
+  }
+}
