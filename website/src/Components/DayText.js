@@ -6,9 +6,6 @@ import React from "react";
 //Bootstrap
 import Col from "react-bootstrap/Col";
 
-//CSS
-import "./Calender.css";
-
 //this function will have the day test, Sat, Sun, Mon
 function DayText() {
   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];

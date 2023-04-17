@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./Pages/Homepage";
 
 import "./Pages/assets/css/main.css";
-import Calender from "./Components/Calender";
+import Calender from "./Pages/Calender";
 
 //Components
 

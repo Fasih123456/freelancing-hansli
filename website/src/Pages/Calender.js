@@ -1,6 +1,6 @@
 //Components
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 import DayNumber from "../Components/DayNumber";
 import DayText from "../Components/DayText";
 import EachHour from "../Components/EachHour";
@@ -14,7 +14,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 //CSS
-import "./Calender.css";
+import "./assets/Calender.css";
 import { Button } from "react-bootstrap";
 
 //This componenet will have the main Calender componenet in it.

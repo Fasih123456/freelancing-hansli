@@ -18,7 +18,6 @@ import { Row, Col } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Button from "react-bootstrap";
 //CSS
-import "./Calender.css";
 
 function generateHours() {
   const hours = [];

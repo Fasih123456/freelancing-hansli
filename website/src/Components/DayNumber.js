@@ -7,9 +7,6 @@ import { Link } from "react-router-dom";
 //Bootstrap
 import Col from "react-bootstrap/Col";
 
-//CSS
-import "./Calender.css";
-
 function getDaysInMonth(date) {
   return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 }
