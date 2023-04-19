@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+.footer{
+    background-color: #001F3F !important;
+}
+.container1{
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+.container1 div{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.font{
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif !important;
+    
+}
+.social{
+    display: flex;
+    flex-direction: row !important;
+    width: fit-content !important;
+    
+}
+.social i{
+    color: white;
+
+}
+.logo1 img{
+    width: 18vw;
+
+    
+}
+@media (max-width:600px)  {
+    .container1{
+       flex-direction: column;
+    align-items: center;
+        
+    }
+    .container1 div{
+        width: 90vw;
+        font-weight: 300;
+        
+    }
+    .para{
+        text-align: center;
+    }
+    .font{
+        text-align: center !important;
+     }
+    .logo1 img{
+        width: 50vw;
+
+        
+    }
+    .bold{
+        font-weight: 800 !important;
+    }
+    .social{
+        width: 50vw !important; 
+        row-gap: 2vw !important;
+        justify-content: space-between;
+    }
+}
+@media (min-width:600px) and (max-width: 1000px) {
+    .container1{
+        flex-direction: column;
+     align-items: center !important;
+         
+     }
+     .container1 div{
+         width: 70vw;
+         font-weight: 300;
+         
+     }
+     .para{
+         text-align: center !important;
+     }
+     .font{
+        text-align: center !important;
+     }
+     .logo1 img{
+         width: 50vw;
+ 
+         
+     }
+     .bold{
+         font-weight: 800 !important;
+     }
+     .social{
+         width: 40vw !important; 
+         row-gap: 2vw !important;
+         justify-content: space-between;
+     }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px)  {
+    .container1 div {
+        width: 30vw;
+        
+      }
+}
+@media (min-width: 1300px) and (max-width: 1600px)  {
+    .container1 div {
+        width: 30vw;
+        
+      }
+}
+@media (min-width: 2560px) and (max-width: 3839px)  {
+    .container1 div {
+        width: 30vw;
+        
+      }
+    .font{
+        font-size: 1.5rem !important;
+        text-align: center !important;
+        
+    }
+    .footer .footer-contact p {
+        line-height: 44px !important;
+      }
+    
+}
+@media (min-width: 3840px) {
+    .container1 div {
+        width: 30vw;
+        
+      }
+    .font{
+        font-size: 1.5rem !important;
+        text-align: center !important;
+        
+    }
+    .footer .footer-contact p {
+        line-height: 44px !important;
+      }
+}

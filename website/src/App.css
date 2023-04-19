@@ -326,37 +326,37 @@ a.nav-link {
 
   .calender {
     width: 300%;
-    background: linear-gradient(
+    /* background: linear-gradient(
       153deg,
       rgba(0, 31, 63, 1) 0%,
       rgba(0, 31, 63, 1) 35%,
       rgba(0, 31, 63, 1) 50%,
       rgba(0, 31, 63, 1) 65%,
       rgba(0, 31, 63, 0.95) 100%
-    );
+    ); */
     padding-top: 0px;
   }
 
   #day-row {
-    background: linear-gradient(
+    /* background: linear-gradient(
       153deg,
       rgba(0, 31, 63, 1) 0%,
       rgba(0, 31, 63, 1) 35%,
       rgba(0, 31, 63, 1) 50%,
       rgba(0, 31, 63, 1) 65%,
       rgba(0, 31, 63, 0.95) 100%
-    );
+    ); */
   }
 
   #date-row {
-    background: linear-gradient(
+    /* background: linear-gradient(
       153deg,
       rgba(0, 31, 63, 1) 0%,
       rgba(0, 31, 63, 1) 35%,
       rgba(0, 31, 63, 1) 50%,
       rgba(0, 31, 63, 1) 65%,
       rgba(0, 31, 63, 0.95) 100%
-    );
+    ); */
     margin-bottom: 0px;
   }
 }
@@ -472,25 +472,11 @@ body.whiteTheme #root > div > div > div:nth-child(3) > div > a {
 }
 body.whiteTheme .footer {
   color: #001f3f;
-  background: linear-gradient(
-    153deg,
-    #ffb6c1 0%,
-    #ffb6c1 35%,
-    #ff69b4 50%,
-    #ffb6c1 65%,
-    rgba(255, 182, 193, 0.95) 100%
-  );
+  background-color: #ffb6c1;
 }
 
 body.whiteTheme .calender {
-  background: linear-gradient(
-    153deg,
-    #ffb6c1 0%,
-    #ffb6c1 35%,
-    #ff69b4 50%,
-    #ffb6c1 65%,
-    rgba(255, 182, 193, 0.95) 100%
-  );
+  background-color: #ffb6c1 !important;
 }
 
 .modal-text {

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 .nav-link {
   display: flex;
   align-items: center;
@@ -25,4 +26,409 @@
 .btn-logout:hover {
   background-color: #138496;
   border-color: #138496;
+}
+.navbar1{
+  width: 37vw;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.tv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  margin: 0 1vw;
+  cursor: pointer;
+}
+.tv:hover{
+  color: #e77f5f !important;
+}
+.tv:hover > #tva{
+  color: #e77f5f !important;
+}
+
+.tv a{
+  padding: 0 !important;
+  padding-top: 2px !important;
+  margin-right: 0 !important;
+  font-size: 1.2rem !important;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+}
+.profile img{
+  margin: 0 !important;
+  width: 2vw;
+}
+.profile a{
+  padding: 0 !important;
+  padding-top: 2px !important;
+  font-size: 1.2rem !important;
+  color: white !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+.nav-link{
+  padding: 0 !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+.suggestion-container {
+  margin-top: 0.4vh !important;
+  width: 15vw;
+  z-index: 2;
+position: absolute;
+background-color: white !important;
+color: black !important;
+padding: 0.2rem 0.6rem !important;
+border-radius: 0.7rem;
+}
+.suggestion-container:hover {
+  filter: brightness(0.9);
+}
+.navbar-responsive{
+  display: none;
+}
+.btn-drop{
+  padding: 0.5rem !important;
+  justify-content: space-around !important;
+}
+.btn-drop:hover{
+  background-color: #588ec438 !important;
+}
+.btn-drop img{
+  margin: 0 !important;
+}
+.btn-drop button{
+  padding: 0 !important;
+}
+.drop-icons{
+  font-size: 2.5vw;
+}
+@media (max-width:600px)  {
+  .navbar1{
+    display: none !important;
+  }
+  .logo{
+    width: 25vw;
+  }
+  .logo img{
+    width: 25vw;
+  }
+  .navbar-responsive{
+    display: flex;
+    height: 5vh;
+  }
+  .profile img{
+    width: 8vw;
+  }
+  .profile h1{
+    display: none;
+  }
+  .suggestion-container {
+    
+    width: 35vw;
+    font-size: 0.5rem;
+    height: 4vh;
+    display: flex;
+    align-items: center  !important;
+    justify-content: center  !important;
+    
+  }
+  .suggestion-container p{
+    margin: 0 !important;
+    
+  }
+  .list{
+    position: absolute;
+    right: 0;
+    top: 6vh;
+    /* position: absolute; */
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4vw !important;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    padding: 0.4rem;
+    border-radius: 1rem;
+    z-index: 2;
+    background-color: #001F3F;
+    box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.3);
+    
+  }
+  .list a {
+    margin: 0 !important;
+  }
+  
+  .list div{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 22vw;
+    justify-content: space-between;
+    height: 3vh !important;
+    
+  }
+  .tv{
+    font-size: 4vw !important;
+    margin: 0 !important;
+    height: fit-content !important;
+  }
+  .tv a{
+    width: 17vw;
+    height: 3vh !important;
+    font-size: 3.2vw !important;
+  }
+  .setting h5{
+    width: 17vw;
+    font-size: 3.2vw !important;
+    margin: 0 !important;
+    
+  }
+  .ham{
+    font-size: 10vw;
+    cursor: pointer;
+    color: white;
+  }
+  
+}
+@media (min-width:600px) and (max-width: 1000px) {
+  .navbar1{
+    display: none !important;
+  }
+  .logo{
+    width: 25vw;
+  }
+  .logo img{
+    width: 25vw;
+  }
+  .suggestion-container {
+    
+    width: 35vw;
+    font-size: 1rem;
+    height: 4vh;
+    display: flex;
+    align-items: center  !important;
+    justify-content: center  !important;
+    
+  }
+  .suggestion-container p{
+    margin: 0 !important;
+    
+  }
+  .navbar-responsive{
+    display: flex;
+    height: 5vh;
+  }
+  .profile img{
+    width: 7vw;
+  }
+  .profile h1{
+    display: none;
+  }
+  .list{
+    position: absolute;
+    right: 0;
+    top: 7vh;
+    /* position: absolute; */
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4vw !important;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    padding: 0.4rem;
+    border-radius: 1rem;
+    z-index: 2;
+    background-color: #001F3F;
+    height: 14vh;
+    box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.3);
+    
+  }
+  
+  .list a {
+    margin: 0 !important;
+  }
+  
+  .list div{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 22vw;
+    justify-content: space-between;
+    margin-top: 1.5vh;
+    height: 3vh !important;
+    
+  }
+  .tv{
+    font-size: 3vw !important;
+    margin: 0 !important;
+    height: fit-content !important;
+  }
+  .tv a{
+    width: 17vw;
+    height: 3vh !important;
+    font-size: 2.5vw !important;
+  }
+  .setting h5{
+    width: 17vw;
+    font-size: 2.5vw !important;
+    margin: 0 !important;
+    
+  }
+  .ham{
+    font-size: 7vw;
+    cursor: pointer;
+    color: white;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1300px)  {
+  .navbar1{
+    width: 45vw;
+    
+  }
+  .suggestion-container {
+    
+    width: 18vw;
+    
+  }
+  .dropdown-menu {
+    width: 11vw;
+    height: 16vh;
+    
+  }
+  .btn-drop button {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1600px)  {
+  .navbar1{
+    width: 47vw;
+    
+  }
+  .suggestion-container {
+    
+    width: 18vw;
+    
+  }
+  .dropdown-menu {
+    width: 11vw;
+    height: 15vh;
+    
+  }
+  .btn-drop button {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 2560px) and (max-width: 3839px)  {
+  .header .logo img {
+    max-height: fit-content !important;
+    width: 10vw;
+    
+  }
+  .navbar-outer{
+    max-width: 90vw;
+  }
+  .navbar1{
+    width: 50vw;
+    
+  }
+  .suggestion-container {
+    
+    width: 22vw;
+    
+  }
+  .tv{
+    
+    font-size: 2.5rem;
+    
+  }
+  .tv a{
+    
+    font-size: 1.8rem !important;
+  }
+  .profile a{
+    
+    font-size: 1.8rem !important;
+    
+  }
+  .navbar a{
+    font-size: 1.8rem !important;
+  }
+  .dropdown-menu {
+    width: 9vw;
+    height: 11vh;
+    
+  }
+  .btn-drop button {
+    font-size: 2rem;
+  }
+  .drop-icons{
+    font-size: 1.5vw;
+  }
+}
+@media (min-width: 3839px) {
+  .header .logo img {
+    max-height: fit-content !important;
+    width: 15vw;
+    
+  }
+  .navbar-outer{
+    max-width: 90vw;
+  }
+  .navbar1{
+    width: 60vw;
+    
+  }
+  .suggestion-container {
+    
+    width: 25vw;
+    
+  }
+  .tv{
+    
+    font-size: 7rem;
+    
+  }
+  .tv a{
+    
+    font-size: 6rem !important;
+  }
+  .profile img{
+    width: 3vw;
+    max-height: fit-content;
+  }
+  .profile a{
+    
+    font-size: 6rem !important;
+    
+  }
+  .navbar a{
+    font-size: 4rem !important;
+  }
+  .dropdown-menu {
+    width: 8vw;
+    height: 8vh;
+    
+  }
+  .btn-drop button {
+    font-size: 2.4rem;
+  }
+  .drop-icons{
+    font-size: 1.5vw;
+  }
 }

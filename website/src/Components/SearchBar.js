@@ -6,7 +6,7 @@ import axios from "axios";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 //Bootstrap
-
+import { AiOutlineSearch } from 'react-icons/ai';
 import { myContext } from "./OAuthContext";
 
 //CSS
@@ -110,18 +110,18 @@ function SearchBar() {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <form
-        id="search-bar"
+    <div >
+      <div
+        id="search-bar1"
         action="#"
-        className="form-search d-flex align-items-stretch mb-3"
+        className="search1"
         data-aos="fade-up"
         data-aos-delay="200"
-        style={{ marginLeft: "0px", paddingTop: "10px" }}
+        
       >
         <input
           type="text"
-          className="form-control"
+          className="search-box__input"
           placeholder="Search Your Show"
           value={query}
           onChange={handleQueryChange}
@@ -129,13 +129,13 @@ function SearchBar() {
         />
         <button
           type="submit"
-          className="btn btn-primary"
-          style={{ backgroundColor: "red" }}
+          
+          
           onClick={handleAdd}
         >
-          Add
+          <AiOutlineSearch/>
         </button>
-      </form>
+      </div>
       {suggestions.length > 0 && (
         <div className="suggestion-container" style={{ paddingTop: "0px", marginTop: "0px" }}>
           <p>

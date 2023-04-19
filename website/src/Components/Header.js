@@ -52,7 +52,7 @@ function Header() {
   return (
     <React.Fragment>
       <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between navbar-outer">
           <a href="/" class="logo d-flex align-items-center" aria-label="TV2NITE Homepage">
             <img src="assets/img/tv2nitelogo.png" alt="" />
           </a>

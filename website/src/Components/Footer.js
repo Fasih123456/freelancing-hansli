@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 //Bootstrap
 
 //CSS
-
+import "./footer.css"
 function Footer() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [location, setLocation] = useState(window.location.pathname);
@@ -27,13 +27,13 @@ function Footer() {
   return (
     <React.Fragment>
       <footer id="footer" class="footer">
-        <div class="container">
-          <div class="row gy-4">
+        <div class="container1">
+          
             <div class="col-lg-5 col-md-12 footer-info">
-              <a href="index.html" class="logo d-flex align-items-center">
+              <a href="index.html" class="logo1 d-flex align-items-center">
                 <img className="logoImage" src="assets/img/tv2nitelogo.png" alt="" />
               </a>
-              <p style={{ textAlign: "left" }}>
+              <p className="font para" style={{ textAlign: "left" }}>
                 TV2nite is your ultimate accessible TV guide that has been created to make your life
                 much simpler. It offers a well-designed interface which shows the schedule of all
                 your favorite TV shows and movies all at one place. Furthermore, TV2nite comes with
@@ -44,8 +44,8 @@ function Footer() {
             </div>
 
             <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-              <h4>Contact Us</h4>
-              <p>
+              <h4 className="font bold">Contact Us</h4>
+              <p className="font">
                 TV2nite Ltd <br />
                 Birmingham Business Park.
                 <br />
@@ -59,9 +59,9 @@ function Footer() {
                 <br />
               </p>
             </div>
-            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-              <h4>Follow Us On Social Media</h4>
-              <div class="social-media-icons mt-3">
+            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start ">
+              <h4 className="font bold">Follow Us On Social Media</h4>
+              <div class="social-media-icons mt-3 social">
                 <a
                   href="https://www.facebook.com/tv2nite"
                   className="social-media-links"
@@ -96,7 +96,7 @@ function Footer() {
                 </a>
               </div>
             </div>
-          </div>
+          
         </div>
 
         <div class="container mt-4" aria-label="copyright">
