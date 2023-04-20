@@ -8,22 +8,22 @@ function OffCanvas({ selectedShow, setSelectedShow }) {
   const userObject = useContext(myContext);
 
   const processShowReminder = () => {
-    console.log("Reminder for", selectedShow.name);
+    //console.log("Reminder for", selectedShow);
     axios
       .post(
         "http://localhost:3001/api/reminders",
         {
-          id: selectedShow.id,
+          id: selectedShow.id ? selectedShow.id : "",
           name: selectedShow.name,
           start_time: `${selectedShow.startTime}:00`,
           end_time: `${selectedShow.endTime}:00`,
-          day: selectedShow.day,
+          day: selectedShow.day ? selectedShow.day : "",
           userid: userObject.id,
         },
         { withCredentials: true }
       )
       .then((res) => {
-        console.log(res);
+        //console.log(res);
       });
   };
 

@@ -57,7 +57,7 @@ function Calender() {
             overflow: "scroll",
           }}
         >
-          <Row>
+          <Row style={{ marginBottom: "50px" }}>
             <Col xs={1}></Col>
             <Col>
               <Button className="suggestion-container whiteOutLine" onClick={handleMoveLeft}>

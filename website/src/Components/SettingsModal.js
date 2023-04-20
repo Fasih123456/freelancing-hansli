@@ -26,16 +26,9 @@ function SettingsModal({
   const [buttonValue, setButtonValue] = useState("OFF");
 
   const updateEmailPreference = async () => {
-    axios
-      .put(`http://localhost:3001/api/reminders/${userObject.id}`, {
-        preference: buttonValue,
-      })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    axios.put(`http://localhost:3001/api/reminders/${userObject.id}`, {
+      preference: buttonValue,
+    });
   };
 
   const toggleChekbox = (e) => {

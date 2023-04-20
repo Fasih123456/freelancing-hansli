@@ -43,7 +43,7 @@ function Header() {
 
     window.addEventListener("resize", handleResize);
 
-    console.log(windowWidth, location);
+    //console.log(windowWidth, location);
 
     // Cleanup the event listener on unmount
     return () => window.removeEventListener("resize", handleResize);

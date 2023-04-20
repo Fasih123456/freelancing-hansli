@@ -17,10 +17,9 @@ module.exports = class EmailNotification {
     );
 
     if (rows.length > 0) {
-      return new EmailNotification(...rows[0]);
+      return rows[0];
     } else {
-      await this.save();
-      return this;
+      this.save();
     }
   }
 

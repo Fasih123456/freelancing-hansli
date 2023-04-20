@@ -6,7 +6,7 @@ import axios from "axios";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 //Bootstrap
-import { AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineSearch } from "react-icons/ai";
 import { myContext } from "./OAuthContext";
 
 //CSS
@@ -34,7 +34,7 @@ function SearchBar() {
       axios
         .get(`https://api.tvmaze.com/singlesearch/shows?q=${query}`)
         .then((response) => {
-          console.log(response.data);
+          //console.log(response.data);
 
           let countryCode = null;
           if (response.data.webChannel && response.data.webChannel.country) {
@@ -44,12 +44,12 @@ function SearchBar() {
           const time = response.data.schedule.time || "";
           const days = response.data.schedule.days || [];
 
-          console.log(countryCode, time, days);
+          //console.log(countryCode, time, days);
 
           // Check if country code is GB and schedule time and days are not empty
           if ((countryCode == "GB" || countryCode == null) && time !== "" && days.length !== 0) {
             setSuggestions([response.data]);
-            console.log(suggestions[0]);
+            //console.log(suggestions[0]);
           }
         })
         .catch((error) => {
@@ -93,32 +93,23 @@ function SearchBar() {
 
   const addEachShow = (id, name, scheduleTime, scheduleDay) => {
     //We will need to add the show to the database
-    axios
-      .post(
-        "http://localhost:3001/api/reminders",
-        {
-          id: id,
-          name: name,
-          start_time: `${scheduleTime}:00`,
-          end_time: `${scheduleTime}:00`,
-          day: scheduleDay,
-          userid: userObject.id,
-        },
-        { withCredentials: true }
-      )
-      .then((res) => console.log(res));
+    axios.post(
+      "http://localhost:3001/api/reminders",
+      {
+        id: id,
+        name: name,
+        start_time: `${scheduleTime}:00`,
+        end_time: `${scheduleTime}:00`,
+        day: scheduleDay,
+        userid: userObject.id,
+      },
+      { withCredentials: true }
+    );
   };
 
   return (
-    <div >
-      <div
-        id="search-bar1"
-        action="#"
-        className="search1"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        
-      >
+    <div>
+      <div id="search-bar1" action="#" className="search1" data-aos="fade-up" data-aos-delay="200">
         <input
           type="text"
           className="search-box__input"
@@ -127,13 +118,8 @@ function SearchBar() {
           onChange={handleQueryChange}
           aria-label="Search bar for your favorite show"
         />
-        <button
-          type="submit"
-          
-          
-          onClick={handleAdd}
-        >
-          <AiOutlineSearch/>
+        <button type="submit" onClick={handleAdd}>
+          <AiOutlineSearch />
         </button>
       </div>
       {suggestions.length > 0 && (

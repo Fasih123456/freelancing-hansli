@@ -7,17 +7,17 @@ export const ContactUs = () => {
   const templateID = process.env.REACT_APP_TEMPELATE_ID;
   const publicKey = process.env.REACT_APP_PUBLIC_KEY_EMAILJS;
 
-  console.log(serviceID, templateID, publicKey);
+  //console.log(serviceID, templateID, publicKey);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
       (result) => {
-        console.log(result.text);
+        //console.log(result.text);
       },
       (error) => {
-        console.log(error.text);
+        //console.log(error.text);
       }
     );
   };

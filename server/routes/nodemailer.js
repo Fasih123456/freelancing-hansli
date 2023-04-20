@@ -8,52 +8,68 @@ const cron = require("node-cron");
 require("dotenv").config();
 
 cron.schedule("*/15 * * * *", async () => {
-  // Your email reminder script code goes here
-  // This code will run every 15 minutes
+  try {
+    const result = await db.execute(`
+      SELECT * FROM users WHERE id IN (
+      SELECT user_id FROM user_shows WHERE show_id IN(
+      SELECT id
+      FROM shows
+      WHERE start_time > DATE_FORMAT(NOW(), '%H:%i:%s')
+      AND start_time < DATE_FORMAT(DATE_ADD(NOW(), INTERVAL 15 MINUTE), '%H:%i:%s')
+      )
+      )
+    `);
 
-  const result = await db.execute(
-    "SELECT u.email, s.name AS show_name, s.start_time AS show_start_time FROM users AS u INNER JOIN user_shows AS us ON u.id = us.user_id INNER JOIN shows s ON us.show_id = s.id WHERE s.start_time BETWEEN NOW() AND NOW() + INTERVAL 15 MINUTE",
-    [req.body.id]
-  );
+    // Loop through each user in the result response
+    for (const user of result) {
+      const { id, name, email, wantsEmail } = user; // Extract user properties
 
-  let testAccount = await nodemailer.createTestAccount();
+      // Check if the user wants to receive email notifications
+      if (wantsEmail) {
+        // Create test account for nodemailer (you can replace this with your actual email transport config)
+        let testAccount = await nodemailer.createTestAccount();
 
-  // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport(config);
+        // Create reusable transporter object using the default SMTP transport
+        let transporter = nodemailer.createTransport(config);
 
-  let MainGenerator = new Mailgen({
-    theme: "default",
-    product: {
-      name: "My Awesome Product",
-      link: "https://mailgen.js/",
-    },
-  });
+        // Create Mailgen generator with desired theme and product details
+        let MainGenerator = new Mailgen({
+          theme: "default",
+          product: {
+            name: "My Awesome Product",
+            link: "https://mailgen.js/",
+          },
+        });
 
-  let response = {
-    body: {
-      name,
-      intro: "Welcome to Mailgen! We're very excited to have you on board.",
-      outro: "Thank for choose TV2NITE for your TV show needs.",
-    },
-  };
+        // Define email response body with user-specific details
+        let response = {
+          body: {
+            name,
+            intro: `Hi ${name},\n\nWelcome to TV2NITE! We're thrilled to have you on board.`,
+            outro: `Thank you for choosing TV2NITE for your TV show needs.\n\nBest regards,\nThe TV2NITE Team`,
+          },
+        };
 
-  let mail = MainGenerator.generate(response);
+        // Generate email using Mailgen
+        let mail = MainGenerator.generate(response);
 
-  // send mail with defined transport object
-  let message = {
-    from: '"Fred Foo 👻" <foo@example.com>', // sender address
-    to: "bar@example.com, baz@example.com", // list of receivers
-    subject: "Show Notifications ", // Subject line
-    html: mail,
-  };
+        // Define email message
+        let message = {
+          from: '"TV2NITE" <noreply@tv2nite.com>', // sender address
+          to: email, // recipient email
+          subject: `Your Show is going to start soon`, // Subject line
+          html: mail,
+        };
 
-  transporter.sendMail(message, (err, info) => {
-    if (err) {
-      console.log("Error sending email: ", err);
-    } else {
-      console.log("Email sent successfully: ", info);
+        // Send email with defined transport object
+        let info = await transporter.sendMail(message);
+
+        //console.log(`Email sent successfully to user with ID ${id}: `, info);
+      }
     }
-  });
+  } catch (error) {
+    console.log("Error sending email: ", error);
+  }
 });
 
 module.exports = router;

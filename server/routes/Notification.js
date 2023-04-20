@@ -7,33 +7,43 @@ const router = require("express").Router();
 require("dotenv").config();
 
 router.post("/api/reminders", async (req, res) => {
-  console.log(req.body);
+  //console.log(req.body);
   const longId = req.body.userid;
   const userId = longId.toString().slice(0, 8);
   const id = Math.floor(Math.random() * (100000 - 1000 + 1)) + 1000; //Give an ID between 1000 to 100000
+  let showid = 0;
+
+  if (req.body.id == "") {
+    showid = Math.floor(Math.random() * (100000 - 1000 + 1)) + 1000;
+  } else {
+    showid = req.body.id;
+  }
+
   const show = new Shows(
-    req.body.id,
+    showid,
     req.body.name,
     req.body.start_time,
     req.body.end_time,
     req.body.day
   );
 
-  console.log(show);
+  //console.log(show);
 
   const showDetails = await show.findOrCreate();
 
-  const userShow = new UsersShows(userId, req.body.id);
+  const userShow = new UsersShows(userId, showid);
+
+  //console.log(userShow);
   const userShowDetails = await userShow.findOrCreate();
 
-  console.log(req.body.start_time);
+  //console.log(req.body.start_time);
 
   let time = subtract15Minutes(req.body.start_time); //This will be in the format of HH:MM
 
   const emailNotification = new EmailNotifications(
     id, //This is the ID of the email notification object itself
     userId, //This is the ID of the user which wants the notification
-    req.body.id, //This is the ID of the show which the wants a notification for
+    showid, //This is the ID of the show which the wants a notification for
     0
   );
 
@@ -47,7 +57,7 @@ router.put("/api/reminders/:id", async (req, res) => {
   const longId = req.params.id;
   //console.log(longId);
   const userId = longId.toString().slice(0, 8);
-  console.log(req.body.preference);
+  //console.log(req.body.preference);
 
   if (req.body.preference == "ON") {
     Users.updatePreference(userId, 1);

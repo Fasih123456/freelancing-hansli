@@ -83,7 +83,7 @@ function EachHour({ offset }) {
     { name: "CNN", startTime: 0, endTime: 3 },
   ]);
 
-  console.log(shows);
+  //console.log(shows);
 
   const path = useLocation().pathname;
   const number = path.split("/").pop();
@@ -122,13 +122,13 @@ function EachHour({ offset }) {
       URL = `https://api.tvmaze.com/schedule?country=${region}&date=${currentYear}-${currentMonth}-${day}`;
     }
 
-    console.log(URL);
+    //console.log(URL);
 
     axios
       .request(options)
       .then((response) => {
         data = response.data.tv_episodes;
-        console.log(data);
+        //console.log(data);
       })
       .then(() => {
         mappedData = data.map((episode) => ({
@@ -149,7 +149,7 @@ function EachHour({ offset }) {
         setShows(mappedData);
       })
       .catch(function (error) {
-        console.error(error);
+        //console.error(error);
       });
 
     /*axios
@@ -199,7 +199,7 @@ function EachHour({ offset }) {
     let Counter = 0;
     const startTime = parseInt(show.startTime);
     const endTime = parseInt(show.endTime);
-    console.log(show);
+    //console.log(show);
 
     // Generate the program cells for each hour
     for (let i = 0; i < 24; i++) {
