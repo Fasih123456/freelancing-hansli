@@ -60,12 +60,12 @@ function Calender() {
           <Row>
             <Col xs={1}></Col>
             <Col>
-              <Button className="suggestion-container whiteOutLine" onClick={handleMoveLeft}>
+              <Button className="move-container whiteOutLine" onClick={handleMoveLeft}>
                 Move Left
               </Button>
             </Col>
             <Col>
-              <Button className="suggestion-container whiteOutLine" onClick={handleMoveRight}>
+              <Button className="move-container whiteOutLine" onClick={handleMoveRight}>
                 Move Right
               </Button>
             </Col>
