@@ -77,3 +77,10 @@
 .calender {
   font-family: "Roboto", sans-serif;
 }
+.move-container{
+  width: 15vw;
+  background-color: rgb(14, 28, 54);
+}
+body.whiteTheme .move-container {
+  background-color: pink;
+}
