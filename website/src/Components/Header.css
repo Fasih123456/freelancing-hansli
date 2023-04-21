@@ -410,7 +410,7 @@ border-radius: 0.7rem;
   }
   .profile img{
     width: 3vw;
-    max-height: fit-content;
+    max-height: none !important;
   }
   .profile a{
     
