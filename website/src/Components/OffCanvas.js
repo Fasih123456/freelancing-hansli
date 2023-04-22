@@ -2,6 +2,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import axios from "axios";
 import React, { useState, useContext } from "react";
 import { myContext } from "./OAuthContext";
+import "./offcanvas.css";
 
 //This component shows the offcanvas for the selected show
 function OffCanvas({ selectedShow, setSelectedShow }) {
@@ -32,8 +33,10 @@ function OffCanvas({ selectedShow, setSelectedShow }) {
   const offcanvas = selectedShow && (
     <Offcanvas show={!!selectedShow} onHide={handleClose}>
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title>{selectedShow.name}</Offcanvas.Title>
+        
       </Offcanvas.Header>
+      <div className="offcanvasdiv">
+      <Offcanvas.Title>{selectedShow.name}</Offcanvas.Title>
       <Offcanvas.Body>
         {selectedShow.image ? (
           <img src={selectedShow.image} />
@@ -70,6 +73,7 @@ function OffCanvas({ selectedShow, setSelectedShow }) {
           </React.Fragment>
         )}
       </Offcanvas.Body>
+      </div>
     </Offcanvas>
   );
 

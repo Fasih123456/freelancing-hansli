@@ -31,7 +31,31 @@
   flex: 1;
   border-radius: 4rem 0 0 4rem;
 }
+.alert{
+  position: absolute;
+  z-index: 3;
+  top: 10vh;
+  
+  right: 8vw;
+  width: 45vw !important;
+  padding: 2vw !important;
+}
 @media (max-width:600px)  {
+  .alert{
+    right: 0;
+    width: 90vw !important;
+    height: 25vh;
+    padding: 2vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .alert div{
+    font-size: 1.2rem !important;
+  }
+  .alert p{
+    font-size: 0.8rem !important;
+  }
   #search-bar1 {
     width: 40vw;
     height: 4vh;
@@ -42,6 +66,21 @@
   }
 }
 @media (min-width:600px) and (max-width: 1000px) {
+  .alert{
+    right: 3vw;
+    width: 90vw !important;
+    height: 25vh;
+    padding: 2vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .alert div{
+    font-size: 1.8rem !important;
+  }
+  .alert p{
+    font-size: 1rem !important;
+  }
   #search-bar1 {
     width: 40vw;
     height: 4vh;
@@ -52,6 +91,17 @@
   }
 }
 @media (min-width: 1000px) and (max-width: 1300px)  {
+  .alert{
+    top: 15vh;
+    right: 5vw;
+    width: 70vw !important;
+    height: 25vh;
+    padding: 2vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
   #search-bar1 {
     width: 20vw;
     
@@ -59,6 +109,16 @@
   }
 }
 @media (min-width: 1300px) and (max-width: 1600px)  {
+  .alert{
+    top: 15vh;
+    right: 5vw;
+    width: 70vw !important;
+    height: 25vh;
+    padding: 2vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   #search-bar1 {
     width: 20vw;
     
@@ -66,6 +126,23 @@
   }
 }
 @media (min-width: 2560px) and (max-width: 3839px)  {
+  .alert{
+    top: 15vh;
+    right: 5vw;
+    width: 60vw !important;
+    height: 25vh;
+    padding: 2vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 2rem;
+  }
+  .alert div{
+    font-size: 3rem !important;
+  }
+  .alert p{
+    font-size: 1.5rem !important;
+  }
   #search-bar1 {
     width: 25vw;
     
@@ -73,6 +150,23 @@
   }
 }
 @media (min-width: 3840px) {
+  .alert{
+    top: 15vh;
+    right: 5vw;
+    width: 60vw !important;
+    height: 25vh;
+    padding: 2vw !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 2rem;
+  }
+  .alert div{
+    font-size: 5rem !important;
+  }
+  .alert p{
+    font-size: 2.2rem !important;
+  }
   #search-bar1 {
     width: 28vw;
     

@@ -59,12 +59,12 @@ function Calender() {
         >
           <Row style={{ marginBottom: "50px" }}>
             <Col xs={1}></Col>
-            <Col>
+            <Col className="space" >
               <Button className="move-container whiteOutLine" onClick={handleMoveLeft}>
                 Move Left
               </Button>
             </Col>
-            <Col>
+            <Col className="space" >
               <Button className="move-container whiteOutLine" onClick={handleMoveRight}>
                 Move Right
               </Button>
