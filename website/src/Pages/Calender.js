@@ -29,7 +29,7 @@ function Calender() {
   };
 
   const handleMoveRight = () => {
-    if (offset > -1500) {
+    if (offset > -3000) {
       setOffset((prevOffset) => prevOffset - 100);
     }
   };
@@ -59,12 +59,12 @@ function Calender() {
         >
           <Row style={{ marginBottom: "50px" }}>
             <Col xs={1}></Col>
-            <Col className="space" >
+            <Col className="space">
               <Button className="move-container whiteOutLine" onClick={handleMoveLeft}>
                 Move Left
               </Button>
             </Col>
-            <Col className="space" >
+            <Col className="space">
               <Button className="move-container whiteOutLine" onClick={handleMoveRight}>
                 Move Right
               </Button>

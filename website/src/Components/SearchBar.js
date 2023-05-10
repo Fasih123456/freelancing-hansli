@@ -84,7 +84,7 @@ function SearchBar() {
         </p>
 
         <p>
-          The show you have added is {suggestions[0].name} and time is
+          The show you have added is {suggestions[0].name} and time is{" "}
           {suggestions[0].schedule.time}
         </p>
       </Alert>

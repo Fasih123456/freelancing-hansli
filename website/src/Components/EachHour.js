@@ -124,7 +124,7 @@ function EachHour({ offset }) {
 
     //console.log(URL);
 
-    axios
+    /*axios
       .request(options)
       .then((response) => {
         data = response.data.tv_episodes;
@@ -150,9 +150,9 @@ function EachHour({ offset }) {
       })
       .catch(function (error) {
         //console.error(error);
-      });
+      });*/
 
-    /*axios
+    axios
       .get(URL)
       .then((response) => {
         data = response.data;
@@ -174,7 +174,7 @@ function EachHour({ offset }) {
       })
       .then(() => {
         setShows(mappedData);
-      });*/
+      });
   };
 
   const options = {
